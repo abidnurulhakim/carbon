@@ -1823,7 +1823,7 @@ func (c *Carbon) SetBSON(raw bson.Raw) error {
 
 	if err == nil {
 		c.SetYear(decoded.Year())
-		c.SetMonth(decoded.Month())
+		c.SetMonth(decoded.Month() + 1)
 		c.SetDay(decoded.Day())
 		c.SetHour(decoded.Hour())
 		c.SetMinute(decoded.Minute())
